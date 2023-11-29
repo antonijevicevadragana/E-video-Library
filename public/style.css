@@ -1,0 +1,69 @@
+body {
+    background: #0a4275;
+}
+body {
+    background-image: url('img/ImgBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    }
+thead {
+    /* border: 1px solid white; */
+    border-top: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+}
+
+.back {
+    background-size: cover;
+    /* height: 100vh; */
+    position: relative;
+    height: calc(100vh - 80px);
+}
+.welcome h1,
+.welcome h3 {
+    animation: bounceOut;
+    animation-duration: 3s;
+    /* font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; */
+    /* text-shadow: 2px 3px black; */
+    color: white;
+    text-shadow: 3px 3px 4px black;
+    font-size: 40px;
+}
+
+.centar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: white;
+    font-family: "Nunito", sans-serif;
+}
+
+.backcontent{
+    background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .welcome h1,
+    .welcome h3 {
+        font-size: 25px;
+    }
+}
+
+.red {
+    color: red;
+}
+.green {
+    color:green;
+}
+.grey {
+    color: grey;
+}
+
