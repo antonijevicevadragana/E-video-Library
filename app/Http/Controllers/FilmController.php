@@ -65,7 +65,7 @@ class FilmController extends Controller
 
             $numbFilm = Film::count();
             if ($numbFilm ==0) {
-                $msg = 'Before adding a movie/film, you should add genre and people in Settings';
+                $msg = trans('Before adding a movie/film, you should add genre and people in Settings');
             }
             else {
                 $msg = '';
@@ -91,7 +91,7 @@ class FilmController extends Controller
 
         $numbFilm = Film::count();
         if ($numbFilm ==0) {
-            $msg = 'Before adding a movie/film, you should add genre and people in Settings';
+            $msg = trans('Before adding a movie/film, you should add genre and people in Settings');
         }
         else {
             $msg = '';
