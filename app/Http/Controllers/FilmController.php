@@ -62,7 +62,15 @@ class FilmController extends Controller
             $populateData = $request->all();
             $genres = Genre::all();
             $people = Person::all();
-            return view('film.index', compact('datas', 'populateData', 'genres'));
+
+            $numbFilm = Film::count();
+            if ($numbFilm ==0) {
+                $msg = 'Before adding a movie/film, you should add genre and people in Settings';
+            }
+            else {
+                $msg = '';
+            }
+            return view('film.index', compact('datas', 'populateData', 'genres', 'msg'));
         } else {
             // nece uci u else granu posto je sve get metodom
             return view('film.index', [
@@ -81,7 +89,15 @@ class FilmController extends Controller
         $genres = Genre::all()->sortBy('name');
         $people = Person::all()->sortBy('fullName');
 
-        return view('film.create', compact('genres', 'people'));
+        $numbFilm = Film::count();
+        if ($numbFilm ==0) {
+            $msg = 'Before adding a movie/film, you should add genre and people in Settings';
+        }
+        else {
+            $msg = '';
+        }
+
+        return view('film.create', compact('genres', 'people', 'msg'));
     }
 
     /**

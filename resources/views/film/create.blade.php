@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+        <div>
+            <p class="red large">{{ $msg }}</p>
+        </div>
         <div class="card">
             <div class="card-header">{{ __('Add') . ': ' . __('Film') }}</div>
             <div class="card-body">
